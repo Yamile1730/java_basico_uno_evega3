@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class punto_uno {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        //Inicializar las variables
+
+        int a;
+        int b;
+        int c;
+
+        //Almacenar en las variables A, B y C
+        System.out.print("introduce el valor de A:");
+        a = scanner.nextInt();
+
+        System.out.print("introduce el valor de B:");
+        b = scanner.nextInt();
+
+        System.out.print("introduce el valor de C:");
+        c = scanner.nextInt();
+
+        //Verificar que los valores sean distintos
+        if (a == b || a == c || b == c) {
+            System.out.println("Error: Los valores deben ser distintos");
+        } else {
+
+            // Encontrar el mayor valor
+            if (a > b && a > c) {
+                System.out.println(a + "es el mayor");
+            } else if (b > a && b > c) {
+                System.out.println(b + "es el mayor");
+            } else {
+                System.out.println(c + "es el mayor");
+            }
+
+            // Encontrar el menor valor
+            if (a < b && a < c) {
+                System.out.println(a + "es el menor");
+            } else if (b < a && b < c) {
+                System.out.println(b + "es el menor");
+            } else {
+                System.out.println(c + "es el menor");
+            }
+        }
+    }
+}
+
